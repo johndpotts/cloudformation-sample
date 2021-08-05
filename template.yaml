@@ -1,3 +1,9 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: "AWS::Serverless-2016-10-31"
-Description: A Sample CRUD application with API gateway, lambda, and dynamoDB
+AWSTemplateFormatVersion: 2010-09-09
+Description: A Sample cloudformation template
+Resources:
+  CFLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: cf-lambda
+      Runtime: nodejs12.x
+      Handler: index.handler
